@@ -1,4 +1,4 @@
-import { MapConfig, MAPS } from '../types';
+import { MAPS } from '../types';
 
 export function worldToMinimap(x: number, z: number, mapId: string): { pixelX: number, pixelY: number } {
   const config = MAPS[mapId];

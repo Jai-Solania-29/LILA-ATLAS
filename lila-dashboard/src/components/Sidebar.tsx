@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { ViewMode, HeatmapType, MatchMeta } from '../types';
 
 interface SidebarProps {

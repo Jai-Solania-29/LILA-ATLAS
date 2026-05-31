@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import Sidebar from './components/Sidebar';
 import MapViewer from './components/MapViewer';
 import Timeline from './components/Timeline';
@@ -41,7 +41,7 @@ function App() {
   // 1. Initial Load: Fetch the metadata for all available matches on component mount.
   // We default to the 'AmbroseValley' map if it exists in the dataset.
   useEffect(() => {
-    fetch('/data/matches_meta.json')
+    fetch(`${import.meta.env.BASE_URL}data/matches_meta.json`)
       .then(res => res.json())
       .then(data => {
         setMatchesMeta(data);
@@ -67,7 +67,7 @@ function App() {
     if (!matchId || viewMode !== 'timeline') return;
     
     setLoading(true);
-    fetch(`/data/matches/${matchId}.json`)
+    fetch(`${import.meta.env.BASE_URL}data/matches/${matchId}.json`)
       .then(res => res.json())
       .then(data => {
         setCurrentMatchData(data);
@@ -90,7 +90,7 @@ function App() {
     if (viewMode !== 'heatmap') return;
     
     setLoading(true);
-    fetch(`/data/heatmaps/${mapId}.json`)
+    fetch(`${import.meta.env.BASE_URL}data/heatmaps/${mapId}.json`)
       .then(res => res.json())
       .then(data => {
         setCurrentHeatmapData(data[heatmapType] || []);

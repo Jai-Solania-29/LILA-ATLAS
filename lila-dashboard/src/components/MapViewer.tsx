@@ -1,5 +1,5 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { MatchData, ViewMode, HeatmapType, MatchEvent } from '../types';
+import { useEffect, useRef, useState } from 'react';
+import { MatchData, ViewMode, HeatmapType } from '../types';
 import { worldToMinimap, getEventColor } from '../lib/utils';
 
 interface MapViewerProps {
@@ -224,7 +224,7 @@ export default function MapViewer({
     ctx.drawImage(offCanvas, 0, 0);
   };
 
-  const mapImagePath = `/minimaps/${mapId}_Minimap.${mapId === 'Lockdown' ? 'jpg' : 'png'}`;
+  const mapImagePath = `${import.meta.env.BASE_URL}minimaps/${mapId}_Minimap.${mapId === 'Lockdown' ? 'jpg' : 'png'}`;
 
   // Pan and Zoom logic
   const [transform, setTransform] = useState({ scale: 1, x: 0, y: 0 });
