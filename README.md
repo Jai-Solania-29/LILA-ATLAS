@@ -39,5 +39,5 @@ The built files will be located in the `dist/` directory, which can be deployed 
 - **High Performance**: Built with an HTML5 `<canvas>` rendering engine capable of smoothly animating thousands of data points at 60fps.
 
 ## Architecture & Insights
-For detailed information regarding the design decisions, coordinate math, and data flow, please read `ARCHITECTURE.md`.
-For actionable insights derived from the dataset for the Level Design team, please read `INSIGHTS.md`.
+For detailed information regarding the design decisions, coordinate math, and data flow, please read [ARCHITECTURE.md](./ARCHITECTURE.md).
+For actionable insights derived from the dataset for the Level Design team, please read [INSIGHTS.md](./INSIGHTS.md).
